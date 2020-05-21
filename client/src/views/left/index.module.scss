@@ -1,0 +1,14 @@
+.index{
+  height:100%;
+  width: 25%;
+  background-image: url('../../assets/images/bg.jpg');
+  background-size: cover;
+  padding-bottom: 15%;
+  img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,32 @@
+.list-item{
+  padding-bottom: 10px;
+  width: 80%;
+  .title{
+    color: #1890ff;
+    text-decoration: none;
+    background-color: initial;
+    outline: none;
+    font-size: 22px;
+    letter-spacing: 4px;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .text{
+      cursor: pointer;
+    }
+  }
+  .content{
+    padding: 5px 20px;
+  }
+  .abstract{
+    padding: 5px 0;
+  }
+  .line{
+    width: 300px;
+    height: 0;
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,52 @@
+// flex
+
+.app-flex {
+  display: flex;
+}
+
+.app-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// 主轴
+.app-flex-end {
+  justify-content: flex-end;
+}
+
+.app-flex-center {
+  justify-content: center;
+}
+
+.app-flex-between {
+  justify-content: space-between;
+}
+
+.app-flex-around {
+  justify-content: space-around;
+}
+
+// 交叉轴
+.app-flex-column-start {
+  align-items: flex-start;
+}
+
+.app-flex-cloumn-end {
+  align-items: flex-end;
+}
+
+.app-flex-column-center {
+  align-items: center;
+}
+
+.app-flex-column-baseline {
+  align-items: baseline;
+}
+
+.app-flex-rest {
+  flex: 1;
+}
+
+.app-flex-wrap {
+  flex-wrap: wrap;
+}
