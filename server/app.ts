@@ -2,9 +2,10 @@ import Koa from "koa"
 import bodyparser from "koa-bodyparser"
 import ErrorHandler from "./services/error"
 import Router from "./routes"
-
+import { db } from "@/db/db"
 const app = new Koa();
 
+db();
 app.use(ErrorHandler)
 app.use(bodyparser())
 app.use(Router.routes())

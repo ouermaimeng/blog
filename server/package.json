@@ -20,7 +20,9 @@
     "@types/log4js": "^2.3.5",
     "@types/mongoose": "^5.5.41",
     "@types/node": "^13.1.7",
+    "@types/yargs": "^15.0.5",
     "ts-node": "^8.6.2",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "yargs": "^15.3.1"
   }
 }

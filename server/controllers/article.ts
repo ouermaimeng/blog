@@ -5,8 +5,8 @@ export default {
    * 获取文章列表
    */
   async getArticleList(ctx: Context): Promise<void> {
-    const { keywords } = ctx.request.body
-    const content = await getArticle(keywords);
+    const { tagId } = ctx.request.body
+    const content = await getArticle(tagId);
     ctx.body = {
       status: ctx.state.status.ok,
       content

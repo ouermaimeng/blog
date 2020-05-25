@@ -1,16 +1,22 @@
-import { Schema } from "mongoose"
-import { db } from "../db/db"
+import mongoose, { Schema, Document } from "mongoose"
+
+export interface UserInterface extends Document {
+  _id: string,
+  username: string,
+  password: string,
+  canwrite: boolean,
+}
+
 // schema
-export const usersSechema = new Schema({
-  _id: Schema.Types.ObjectId,
-  username: Schema.Types.String,
-  password: Schema.Types.String,
-  canwrite: Schema.Types.Boolean,
-  articles: Schema.Types.Array
+export const usersSechema: Schema = new Schema({
+  _id: String,
+  username: String,
+  password: String,
+  canwrite: Boolean
 })
 
 // model
-export const User = db.model('Users', usersSechema);
+export const User = mongoose.model<UserInterface>('Users', usersSechema);
 
 //entity
 export default new User();
