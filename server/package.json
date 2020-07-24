@@ -9,7 +9,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "log4js": "^6.1.0",
-    "mongoose": "^5.8.7"
+    "mongoose": "5.9.25"
   },
   "devDependencies": {
     "@types/crypto-js": "^3.1.43",
@@ -21,6 +21,7 @@
     "@types/mongoose": "^5.5.41",
     "@types/node": "^13.1.7",
     "@types/yargs": "^15.0.5",
+    "koa-compose": "^4.1.0",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.4",
     "yargs": "^15.3.1"

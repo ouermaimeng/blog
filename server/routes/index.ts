@@ -1,17 +1,6 @@
-import KoaRouter from "koa-router"
-import { User } from "../models/users"
-// import article from "@/controllers/article"
-import article from "@/controllers/article"
-const Router = new KoaRouter();
+import KoaCompose from "koa-compose"
+import Article from "./article"
 
-// 
-Router.get('/graphql', async (ctx) => {
-  ctx.body = {
-    status: "OK",
-    content: await User.find()
-  }
-})
-  .get('/getArticleList', article.getArticleList)
+const router = KoaCompose([Article]);
 
-
-export default Router;
+export default router
