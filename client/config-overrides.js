@@ -10,7 +10,7 @@ const devServerConfig = () => config => ({
   port: 3000,
   proxy: {
     "/api": {
-      target: "http://192.168.70.10:8080",
+      target: "http://192.168.200.71:8080",
       pathRewrite: { "^/api": "" }
     }
   }

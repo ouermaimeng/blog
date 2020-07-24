@@ -3,19 +3,18 @@ import { Route } from "react-router-dom"
 import { Spin } from "antd"
 
 import style from "./index.module.scss"
-import request from "../../request"
+import Api from "@/request"
 
 const Header = lazy(() => import('@/components/header'))
 const ArticleList = lazy(() => import('@/components/articleList'))
 const ArticleContent = lazy(() => import('@/components/articleContent'))
 
 const Right: React.FC = () => {
+  const getArticleList = async () => {
+    const res = await Api.getArticleList();
+  }
   useEffect(() => {
-    request('/api/graphql', {
-      method: "get",
-    }).then(data => {
-      console.log(data)
-    });
+    getArticleList()
   }, [])
   return <div className={`app-flex-column app-flex-rest app-flex-column-center ${style.right}`}>
     <Suspense fallback={<Spin />}>

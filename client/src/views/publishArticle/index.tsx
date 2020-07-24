@@ -4,6 +4,7 @@ import md from "@/config/markdownConfig"
 import style from "./index.module.scss"
 const { TextArea } = Input
 const Publish: React.FC = () => {
+  console.log(md)
   return <div className={`app-flex-column ${style.publish}`}>
     <Input placeholder="请输入标题"></Input>
     <Select placeholder="请选择标签" mode="multiple" style={{ width: '100%', margin: '20px 0' }}></Select>

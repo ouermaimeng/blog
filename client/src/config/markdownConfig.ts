@@ -1,7 +1,7 @@
 import * as hljs from "highlight.js";
 import markdown from "markdown-it";
-import "../style/github-markdown.css";
-import "../style/atom-one-dark.css";
+import "../style/markdown/github-markdown.css";
+import "../style/markdown/atom-one-dark.css";
 
 const md = markdown({
     html: false, // Enable HTML tags in source
