@@ -1,14 +1,7 @@
 import mongoose, { Schema, Document } from "mongoose";
-import { TagInterface } from "./tags"
-
-export interface ArticleInterface extends Document {
-  _id: string,
-  title: string,
-  content: string,
-  tags: Array<TagInterface['tag']>,
-  userid: string,
-  createTime: string,
-  updateTime: string,
+import { ArticleInterface as AT } from "commonInterface/modelcommon"
+export interface ArticleInterface extends AT, Document {
+  _id: AT['_id']
 }
 
 // schema

@@ -1,10 +1,7 @@
 import mongoose, { Schema, Document } from "mongoose"
-
-export interface UserInterface extends Document {
-  _id: string,
-  username: string,
-  password: string,
-  canwrite: boolean,
+import { UserInterface as UT } from "commonInterface/modelcommon"
+export interface UserInterface extends UT, Document {
+  _id: UT['_id'],
 }
 
 // schema

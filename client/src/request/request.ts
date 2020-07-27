@@ -5,7 +5,7 @@ import { Response } from "../interfaces/response";
  * @param {string} url
  * @param {Object} data 参数
  */
-const request = (url: string, method = 'get', data = {}): Promise<Response<any>> =>
+const request = <T>(url: string, method = 'get', data = {}): Promise<Response<T>> =>
   fetch(url, {
     method,
     headers: {
@@ -22,9 +22,7 @@ const request = (url: string, method = 'get', data = {}): Promise<Response<any>>
         return res;
       } else {
         message.error(res.msg);
-        if (res.status === "WRONG") {
-          return Promise.reject(res);
-        }
+        return Promise.reject(res);
       }
     });
 export default request;

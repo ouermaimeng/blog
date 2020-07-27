@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "../",
     "paths": {
       "@/*": [
-        "*"
+        "client/src/*"
+      ],
+      "commonInterface": [
+        "commonInterface/*"
       ]
     }
   }

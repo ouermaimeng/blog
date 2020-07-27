@@ -8,7 +8,7 @@ const app = new Koa();
 db();
 app.use(ErrorHandler)
 app.use(bodyparser())
-app.use(Router.routes())
+app.use(Router)
 
 app.listen(8080, "192.168.200.71", () => {
   console.log('server start 8080')

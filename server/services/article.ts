@@ -5,5 +5,5 @@ import { Article } from "@/models/article"
  * @param {string} tagId
  */
 export const getArticle = async (tagId?: string) => {
-  return await Article.find({ tags: tagId })
+  return await Article.find({ [tagId && 'tags']: tagId })
 }

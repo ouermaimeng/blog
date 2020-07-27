@@ -1,9 +1,8 @@
 import mongoose, { Schema, Document } from "mongoose"
-
+import { TagInterface as TT } from "commonInterface/modelcommon"
 // interface
-export interface TagInterface extends Document {
-  _id: string,
-  tag: string
+export interface TagInterface extends TT, Document {
+  _id: TT['_id'],
 }
 
 // schema
