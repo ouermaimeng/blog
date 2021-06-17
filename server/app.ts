@@ -1,8 +1,9 @@
+import 'module-alias/register';
 import Koa from "koa"
 import bodyparser from "koa-bodyparser"
 import ErrorHandler from "./services/error"
-import Router from "./routes"
 import { db } from "@/db/db"
+import Router from "./routes"
 const app = new Koa();
 
 db();
