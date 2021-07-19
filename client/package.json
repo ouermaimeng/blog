@@ -14,7 +14,7 @@
     "antd": "^3.26.5",
     "apollo-boost": "^0.4.7",
     "graphql": "^14.5.8",
-    "highlight.js": "^9.17.1",
+    "highlight.js": "^10.4.1",
     "markdown-it": "^10.0.0",
     "mobx": "^5.15.2",
     "mobx-react": "^6.1.5",
