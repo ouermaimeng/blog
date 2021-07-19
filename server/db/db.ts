@@ -1,2 +1,3 @@
 import mongoose from "mongoose"
-export const db = async() => mongoose.connect('mongodb://localhost', { dbName: 'blog' })
+import { dbInfo } from "@/config/config"
+export const db = async () => mongoose.connect(`mongodb://${dbInfo.url}`, { dbName: dbInfo.dbName })

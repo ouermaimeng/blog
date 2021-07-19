@@ -1,18 +1,21 @@
-import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom"
-import { Spin } from 'antd';
+import React, { lazy, Suspense } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-const Publish = lazy(() => import("@/views/publishArticle"))
-const Index = lazy(() => import("@/views/index"))
+import PageLoading from '@/components/pageLoading'
+const Publish = lazy(() => import('@/views/publishArticle'))
+const Index = lazy(() => import('@/views/index'))
+
 const App: React.FC = () => {
-  return <BrowserRouter>
-    <Suspense fallback={<Spin />}>
-      <Switch>
-        <Route path="/publish" exact component={Publish}></Route>
-        <Route path="/" component={Index}></Route>
-      </Switch>
-    </Suspense>
-  </BrowserRouter>
+	return (
+		<BrowserRouter>
+			<Switch>
+				<Route path="/publish" exact component={Publish}></Route>
+				<Suspense fallback={<PageLoading />}>
+					<Route path="/" component={Index}></Route>
+				</Suspense>
+			</Switch>
+		</BrowserRouter>
+	)
 }
 
-export default App;
+export default App
